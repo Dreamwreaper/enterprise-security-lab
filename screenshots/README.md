@@ -79,3 +79,13 @@ You’re doing this exactly right—this is how you build real portfolio value.
 
 ## Disclaimer
 This project was conducted in a controlled lab environment for educational purposes only. No unauthorized systems or data were targeted.
+## Screenshots
+
+### Splunk Detection
+![Detection](screenshots/splunk-detection-results.png)
+
+### Raw Logs
+![Logs](screenshots/splunk-raw-logs.png)
+
+### Traffic Analysis
+![Traffic](screenshots/splunk-traffic-analysis.png)
