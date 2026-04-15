@@ -7,6 +7,13 @@ This lab simulates web application activity and maps observed behaviors to the M
 
 ## Technique Mapping
 
+### T1190 – Exploit Public-Facing Application
+
+Injection attempt observed in application input:
+
+![Injection](screenshots/mitre-t1190-injection.png)
+
+
 ### Tactic: Initial Access
 **Technique: T1190 – Exploit Public-Facing Application**
 
@@ -52,3 +59,5 @@ index=main login OR password
 
 ### Traffic Analysis
 index=main | stats count by host
+
+
