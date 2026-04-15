@@ -1,8 +1,11 @@
+## Detection Strategy
 
-## Results
+```spl
+# Injection Detection
+index=main ("OR 1=1" OR "admin")
 
-Splunk successfully ingested HTTP traffic and identified patterns associated with user input and potential injection attempts.
+# Authentication Monitoring
+index=main login OR password
 
-Detection queries were adjusted to account for variations in logged data.
-
-Screenshots of results are included in the screenshots directory.
+# Traffic Analysis
+index=main | stats count by host
