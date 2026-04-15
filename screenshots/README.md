@@ -42,55 +42,35 @@ This demonstrates how malicious patterns appear in web traffic and how they can 
 
 ---
 
+# Enterprise Web Application Security Lab
+
+## Overview
+This project demonstrates hands-on web application security testing, traffic analysis, and SIEM-based detection using OWASP Juice Shop, Burp Suite, and Splunk.
+
+The goal was to simulate real-world attack scenarios, capture HTTP traffic, and develop detection strategies aligned with security operations and compliance frameworks.
+
+---
+
+## Tools Used
+
+- OWASP Juice Shop  
+- Burp Suite Community Edition  
+- Splunk Enterprise  
+- Docker / WSL2  
+
+---
+
+## Lab Workflow
+
+1. Deployed OWASP Juice Shop locally  
+2. Generated user traffic and simulated attack scenarios  
+3. Captured HTTP requests using Burp Suite  
+4. Exported logs and ingested them into Splunk  
+5. Built detection queries to identify suspicious activity  
+
+---
+
 ## SIEM Detection Example
 
 ```spl
-index=main "' OR 1=1"
-
----
-
-## Then scroll down and click:
-
-👉 **Commit new file**
-
----
-
-# ✅ AFTER THAT
-
-You will now see:
-👉 `README.md` on your repo homepage
-
----
-
-# 🔥 NEXT STEP
-
-After you create it, tell me:
-
-👉 **“README created”**
-
-Then we’ll:
-
-- Build your folders (attack-scenarios, detection, etc.)
-- Upload your screenshots
-- Move into **Splunk ingestion (this is where you stand out HARD)**
-
-You’re doing this exactly right—this is how you build real portfolio value.
----
-
-## Disclaimer
-This project was conducted in a controlled lab environment for educational purposes only. No unauthorized systems or data were targeted.
-## Screenshots
-
-### Splunk Detection
-![Detection](screenshots/splunk-detection-results.png)
-
-### Raw Logs
-![Logs](screenshots/splunk-raw-logs.png)
-
-### Traffic Analysis
-![Traffic](screenshots/splunk-traffic-analysis.png)
-
-```md
-## MITRE ATT&CK Mapping
-
-This project includes mapping of simulated attack activity to the MITRE ATT&CK framework to align detection strategies with real-world adversary techniques.
+index=main ("OR 1=1" OR "admin")
