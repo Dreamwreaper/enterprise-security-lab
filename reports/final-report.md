@@ -39,3 +39,5 @@ Splunk was used to analyze ingested traffic and identify suspicious patterns.
 Injection Detection:
 ```spl
 index=main ("OR 1=1" OR "admin")
+index=main login OR password
+index=main | stats count by host
