@@ -89,3 +89,8 @@ This project was conducted in a controlled lab environment for educational purpo
 
 ### Traffic Analysis
 ![Traffic](screenshots/splunk-traffic-analysis.png)
+
+```md
+## MITRE ATT&CK Mapping
+
+This project includes mapping of simulated attack activity to the MITRE ATT&CK framework to align detection strategies with real-world adversary techniques.
